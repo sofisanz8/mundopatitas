@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mundo Patitas | Accesorios, Juguetes y Cuidado para Mascotas</title>
+
+    <!-- FUENTES TERNURA & MASCOTAS (FREDOKA Y QUICKSAND) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- ESTILO COMPLETAMENTE NUEVO: DULCE, CÁLIDO Y MODERNO -->
+    <style>
+        :root {
+            --primary: #f97316;          /* Naranja cálido */
+            --primary-soft: #ffedd5;     /* Naranja pastel suave */
+            --accent: #facc15;           /* Amarillo sol */
+            --bg-body: #fafaf9;          /* Crema suave de fondo */
+            --bg-card: #ffffff;          /* Blanco puro tarjetas */
+            --bg-alt: #f5f5f4;           /* Fondo secundario */
+            --text-dark: #44403c;        /* Marrón/Gris chocolate */
+            --text-muted: #78716c;       /* Texto suave */
+            --border-radius: 24px;
+            --shadow-soft: 0 10px 25px -5px rgba(249, 115, 22, 0.08);
+            --shadow-hover: 0 20px 35px -5px rgba(249, 115, 22, 0.18);
+            --transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Fredoka', cursive;
+        }
+
+        /* ==========================================
+           ENCABEZADO / NAVEGACIÓN
+        ========================================== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 8%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 2px solid var(--primary-soft);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo::before {
+            content: "🐾";
+            font-size: 1.8rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-soft);
+            color: var(--primary);
+        }
+
+        /* ==========================================
+           HERO (BANNER PRINCIPAL)
+        ========================================== */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 5%;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(68, 64, 60, 0.6) 0%, rgba(68, 64, 60, 0.4) 100%);
+            z-index: 1;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            color: #ffffff;
+        }
+
+        .hero-text h1 {
+            font-size: 3.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.3);
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            margin-bottom: 2.2rem;
+            color: #f5f5f4;
+            font-weight: 500;
+        }
+
+        .hero-text button {
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 1.1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            font-family: 'Fredoka', cursive;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+            transition: var(--transition);
+        }
+
+        .hero-text button:hover {
+            background: #ea580c;
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.5);
+        }
+
+        /* ==========================================
+           SECCIONES GENERALES
+        ========================================== */
+        .section {
+            padding: 5rem 8%;
+        }
+
+        .section.fondo {
+            background-color: var(--bg-alt);
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '🦴';
+            display: block;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .texto-centro {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           TARJETAS DE SERVICIOS
+        ========================================== */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 2px solid #f5f5f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-soft);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .card button {
+            background-color: var(--primary-soft);
+            color: var(--primary);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-family: 'Fredoka', cursive;
+            cursor: pointer;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+
+        .card button:hover {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+
+        /* ==========================================
+           TIENDA VIRTUAL
+        ========================================== */
+        .tienda-intro {
+            text-align: center;
+            color: var(--text-muted);
+            margin: -1.5rem auto 2.5rem;
+            max-width: 700px;
+        }
+
+        .tienda-contenido {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .producto {
+            background: #fff;
+            border: 2px solid #f5f5f4;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .producto:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-soft);
+        }
+
+        .producto img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .producto-info {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .producto-info h3 {
+            color: var(--primary);
+            margin-bottom: .4rem;
+        }
+
+        .producto-info p {
+            color: var(--text-muted);
+            font-size: .95rem;
+            margin-bottom: .8rem;
+            flex: 1;
+        }
+
+        .precio {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .producto-info button, .boton-carrito {
+            border: 0;
+            background: var(--primary);
+            color: white;
+            padding: .8rem 1rem;
+            border-radius: 25px;
+            font-family: 'Fredoka', cursive;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .producto-info button:hover, .boton-carrito:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+
+        .carrito {
+            background: white;
+            padding: 1.5rem;
+            border: 2px solid var(--primary-soft);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            position: sticky;
+            top: 110px;
+        }
+
+        .carrito h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .carrito-vacio {
+            color: var(--text-muted);
+            font-size: .95rem;
+        }
+
+        .item-carrito {
+            border-bottom: 1px solid #eee;
+            padding: .8rem 0;
+            display: flex;
+            justify-content: space-between;
+            gap: .5rem;
+            font-size: .9rem;
+        }
+
+        .item-carrito button {
+            border: 0;
+            background: var(--primary-soft);
+            color: var(--primary);
+            border-radius: 8px;
+            padding: .2rem .5rem;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .total-carrito {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 1.2rem 0;
+        }
+
+        .acciones-carrito {
+            display: grid;
+            gap: .7rem;
+        }
+
+        .boton-vaciar {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background: white;
+            padding: .7rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+
+        .controles-tienda {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: .8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .controles-tienda input,
+        .controles-tienda select,
+        .formulario-compra input,
+        .formulario-compra textarea,
+        .formulario-compra select {
+            width: 100%;
+            padding: .85rem 1rem;
+            border: 2px solid #e7e5e4;
+            border-radius: 14px;
+            font: inherit;
+            background: #fff;
+            color: var(--text-dark);
+        }
+
+        .formulario-compra {
+            margin-top: 1.5rem;
+            padding-top: 1.2rem;
+            border-top: 2px solid var(--primary-soft);
+        }
+
+        .formulario-compra h4 {
+            color: var(--primary);
+            font-family: 'Fredoka', cursive;
+            font-size: 1.2rem;
+            margin-bottom: .8rem;
+        }
+
+        .formulario-compra label {
+            display: block;
+            font-weight: 700;
+            font-size: .9rem;
+            margin: .7rem 0 .3rem;
+        }
+
+        .metodos-pago {
+            display: grid;
+            gap: .5rem;
+            margin: .8rem 0 1rem;
+        }
+
+        .metodos-pago label {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-weight: 500;
+            margin: .2rem 0;
+        }
+
+        .metodos-pago input {
+            width: auto;
+        }
+
+        .aviso-pago {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-radius: 12px;
+            padding: .8rem;
+            color: #7c2d12;
+            font-size: .85rem;
+            margin: .8rem 0;
+        }
+
+        .producto[hidden] {
+            display: none !important;
+        }
+
+        .sin-resultados {
+            display: none;
+            grid-column: 1 / -1;
+            text-align: center;
+            color: var(--text-muted);
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .productos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .carrito { position: static; }
+        }
+
+        @media (max-width: 560px) {
+            .productos { grid-template-columns: 1fr; }
+        }
+
+        /* ==========================================
+           GALERÍA DE IMÁGENES
+        ========================================== */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 4px solid #ffffff;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+
+        /* ==========================================
+           FORMULARIO DE CONTACTO
+        ========================================== */
+        form {
+            max-width: 580px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 1.1rem 1.4rem;
+            border: 2px solid #e7e5e4;
+            border-radius: 18px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+            outline: none;
+            background-color: #ffffff;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.12);
+        }
+
+        form textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        form button[type="submit"] {
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 1.1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            font-family: 'Fredoka', cursive;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.25);
+        }
+
+        form button[type="submit"]:hover {
+            background: #ea580c;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(249, 115, 22, 0.4);
+        }
+
+        /* ==========================================
+           PIE DE PÁGINA
+        ========================================== */
+        footer {
+            background-color: var(--text-dark);
+            color: #d6d3d1;
+            text-align: center;
+            padding: 3rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 5%;
+            }
+
+            nav {
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.3rem;
+            }
+
+            .section {
+                padding: 3.5rem 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo">
+            Mundo Patitas
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#tienda">Tienda</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- HERO PRINCIPAL -->
+    <section id="inicio" class="hero" style="background-image: url('https://oercommons.s3.amazonaws.com/media/courseware/lesson/image/Pets_LDDMenw.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="hero-text">
+            <h1>Todo para el Bienestar y Diversión de tu Mascota</h1>
+            <p>Encuentra los mejores accesorios, juguetes interactivos y alimentos de alta calidad para consentir a tu mejor amigo.</p>
+            <button onclick="mostrarMensaje()">Conocer más</button>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="section">
+        <h2>Sobre Nosotros</h2>
+        <p class="texto-centro">
+            En Mundo Patitas somos apasionados por los animales. Nos dedicamos a ofrecer productos seleccionados de la más alta calidad, asesoría personalizada y todo lo que tu perro o gato necesita para mantenerse sano y feliz.
+        </p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section fondo">
+        <h2>Servicios y Productos</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Juguetes e Interacción</h3>
+                <p>Variedad de juguetes interactivos, rascadores para gatos y pelotas resistentes para perros.</p>
+                <button onclick="mostrarServicio('Juguetes e Interacción')">Ver más</button>
+            </div>
+
+            <div class="card">
+                <h3>Nutrición y Alimentos</h3>
+                <p>Las mejores marcas de alimento balanceado, snacks nutritivos y complementos para todas las edades.</p>
+                <button onclick="mostrarServicio('Nutrición y Alimentos')">Ver más</button>
+            </div>
+
+            <div class="card">
+                <h3>Accesorios y Confort</h3>
+                <p>Camas ergonómicas, collares ajustables, correas de paseo y accesorios de transporte seguros.</p>
+                <button onclick="mostrarServicio('Accesorios y Confort')">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TIENDA VIRTUAL -->
+    <section id="tienda" class="section fondo">
+        <h2>Nuestra Tienda</h2>
+        <p class="tienda-intro">Encuentra productos especiales para consentir a tu compañero de aventuras. Agrega tus favoritos al carrito.</p>
+
+        <div class="tienda-contenido">
+
+            <div class="controles-tienda">
+                <input type="search" id="buscar-producto" placeholder="🔎 Buscar un producto..." oninput="filtrarProductos()">
+                <select id="categoria-producto" onchange="filtrarProductos()">
+                    <option value="todos">Todas las categorías</option>
+                    <option value="perros">Productos para perros</option>
+                    <option value="gatos">Productos para gatos</option>
+                </select>
+                <select id="orden-productos" onchange="filtrarProductos()">
+                    <option value="destacados">Ordenar por: destacados</option>
+                    <option value="menor">Precio: menor a mayor</option>
+                    <option value="mayor">Precio: mayor a menor</option>
+                    <option value="nombre">Nombre: A a Z</option>
+                </select>
+            </div>
+            <div class="productos" id="contenedor-productos">
+                <article class="producto" data-categoria="perros" data-nombre="juguete para perro" data-precio="25000">
+                    <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=700&q=80" alt="Juguete para perro">
+                    <div class="producto-info">
+                        <h3>Juguete para perro</h3>
+                        <p>Un juguete divertido para sus momentos de juego.</p>
+                        <span class="precio">$25.000</span>
+                        <button onclick="agregarAlCarrito('Juguete para perro', 25000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="perros" data-nombre="alimento para mascotas" data-precio="48000">
+                    <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=700&q=80" alt="Alimento para mascotas">
+                    <div class="producto-info">
+                        <h3>Alimento para mascotas</h3>
+                        <p>Alimento para acompañar su nutrición diaria.</p>
+                        <span class="precio">$48.000</span>
+                        <button onclick="agregarAlCarrito('Alimento para mascotas', 48000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="perros" data-nombre="cama para mascota" data-precio="75000">
+                    <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=700&q=80" alt="Cama para mascota">
+                    <div class="producto-info">
+                        <h3>Cama para mascota</h3>
+                        <p>Un espacio cómodo para descansar.</p>
+                        <span class="precio">$75.000</span>
+                        <button onclick="agregarAlCarrito('Cama para mascota', 75000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="perros" data-nombre="collar para mascota" data-precio="22000">
+                    <img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?auto=format&fit=crop&w=700&q=80" alt="Collar para mascota">
+                    <div class="producto-info">
+                        <h3>Collar para mascota</h3>
+                        <p>Accesorio práctico para sus paseos.</p>
+                        <span class="precio">$22.000</span>
+                        <button onclick="agregarAlCarrito('Collar para mascota', 22000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="gatos" data-nombre="rascador para gato" data-precio="55000">
+                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80" alt="Rascador para gato">
+                    <div class="producto-info">
+                        <h3>Rascador para gato</h3>
+                        <p>Para que tu gato juegue y se entretenga.</p>
+                        <span class="precio">$55.000</span>
+                        <button onclick="agregarAlCarrito('Rascador para gato', 55000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="perros" data-nombre="pelota para mascota" data-precio="15000">
+                    <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=700&q=80" alt="Pelota para mascota">
+                    <div class="producto-info">
+                        <h3>Pelota para mascota</h3>
+                        <p>Ideal para compartir juegos y actividad.</p>
+                        <span class="precio">$15.000</span>
+                        <button onclick="agregarAlCarrito('Pelota para mascota', 15000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="perros" data-nombre="comedero antideslizante" data-precio="32000">
+                    <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=700&q=80" alt="Comedero para perro">
+                    <div class="producto-info">
+                        <h3>Comedero antideslizante</h3>
+                        <p>Práctico y cómodo para la hora de comer.</p>
+                        <span class="precio">$32.000</span>
+                        <button onclick="agregarAlCarrito('Comedero antideslizante', 32000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="gatos" data-nombre="raton de juguete para gato" data-precio="12000">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" alt="Gato jugando">
+                    <div class="producto-info">
+                        <h3>Ratón de juguete</h3>
+                        <p>Un pequeño juguete para despertar su curiosidad.</p>
+                        <span class="precio">$12.000</span>
+                        <button onclick="agregarAlCarrito('Ratón de juguete', 12000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="perros" data-nombre="correa para perro" data-precio="28000">
+                    <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=700&q=80" alt="Accesorio para paseo">
+                    <div class="producto-info">
+                        <h3>Correa para paseo</h3>
+                        <p>Ideal para salir a caminar con seguridad.</p>
+                        <span class="precio">$28.000</span>
+                        <button onclick="agregarAlCarrito('Correa para paseo', 28000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="gatos" data-nombre="cama suave para gato" data-precio="62000">
+                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80" alt="Gato descansando">
+                    <div class="producto-info">
+                        <h3>Cama suave para gato</h3>
+                        <p>Un rincón acogedor para sus siestas.</p>
+                        <span class="precio">$62.000</span>
+                        <button onclick="agregarAlCarrito('Cama suave para gato', 62000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="perros" data-nombre="kit de cepillado" data-precio="26000">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=700&q=80" alt="Perro para cuidado de pelaje">
+                    <div class="producto-info">
+                        <h3>Kit de cepillado</h3>
+                        <p>Ayuda a mantener su pelaje limpio y cuidado.</p>
+                        <span class="precio">$26.000</span>
+                        <button onclick="agregarAlCarrito('Kit de cepillado', 26000)">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="gatos" data-nombre="torre de juegos para gato" data-precio="89000">
+                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80" alt="Gato junto a sus juguetes">
+                    <div class="producto-info">
+                        <h3>Torre de juegos</h3>
+                        <p>Para trepar, jugar y descansar en las alturas.</p>
+                        <span class="precio">$89.000</span>
+                        <button onclick="agregarAlCarrito('Torre de juegos', 89000)">Agregar al carrito</button>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="carrito">
+                <h3>🛒 Mi carrito</h3>
+                <div id="lista-carrito">
+                    <p class="carrito-vacio">Todavía no has agregado productos.</p>
+                </div>
+                <p class="total-carrito">Total: <span id="total-carrito">$0</span></p>
+                <div class="acciones-carrito">
+                    <button class="boton-vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+                </div>
+
+                <form class="formulario-compra" id="formulario-compra" onsubmit="finalizarCompra(event)">
+                    <h4>📋 Datos para el pedido</h4>
+                    <label for="cliente-nombre">Nombre completo</label>
+                    <input id="cliente-nombre" type="text" placeholder="Tu nombre" required>
+
+                    <label for="cliente-correo">Correo electrónico</label>
+                    <input id="cliente-correo" type="email" placeholder="tunombre@correo.com" required>
+
+                    <label for="cliente-telefono">Teléfono</label>
+                    <input id="cliente-telefono" type="tel" placeholder="Tu número de celular" required>
+
+                    <label for="cliente-direccion">Dirección de entrega</label>
+                    <textarea id="cliente-direccion" rows="2" placeholder="Dirección, barrio y ciudad" required></textarea>
+
+                    <label for="cliente-notas">Notas del pedido (opcional)</label>
+                    <textarea id="cliente-notas" rows="2" placeholder="Indicaciones adicionales"></textarea>
+
+                    <h4 style="margin-top:1rem;">💳 Forma de pago</h4>
+                    <div class="metodos-pago">
+                        <label><input type="radio" name="metodo-pago" value="tarjeta" required onchange="mostrarFormularioTarjeta()"> Tarjeta débito o crédito (simulación)</label>
+                        <label><input type="radio" name="metodo-pago" value="nequi" onchange="mostrarFormularioTarjeta()"> Nequi (simulación)</label>
+                        <label><input type="radio" name="metodo-pago" value="contraentrega" onchange="mostrarFormularioTarjeta()"> Pago contra entrega</label>
+                    </div>
+
+                    <div id="datos-tarjeta" hidden>
+                        <p class="aviso-pago">🧪 Modo demostración: usa únicamente datos ficticios. No escribas información de una tarjeta real. No se realizará ningún cobro.</p>
+                        <label for="tarjeta-nombre">Nombre del titular (de prueba)</label>
+                        <input id="tarjeta-nombre" type="text" placeholder="Ejemplo: Cliente de prueba" autocomplete="off">
+
+                        <label for="tarjeta-numero">Número de tarjeta ficticio</label>
+                        <input id="tarjeta-numero" type="text" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" autocomplete="off">
+
+                        <label for="tarjeta-fecha">Fecha de vencimiento ficticia</label>
+                        <input id="tarjeta-fecha" type="text" maxlength="5" placeholder="MM/AA" autocomplete="off">
+
+                        <label for="tarjeta-cvv">Código de seguridad ficticio</label>
+                        <input id="tarjeta-cvv" type="text" inputmode="numeric" maxlength="4" placeholder="123" autocomplete="off">
+                    </div>
+                    <button class="boton-carrito" type="submit">Continuar con mi pedido</button>
+                    <button class="boton-vaciar" type="button" onclick="comprarPorWhatsApp()">Enviar pedido por WhatsApp</button>
+                </form>
+            </aside>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE IMÁGENES -->
+    <section id="galeria" class="section">
+        <h2>Galería de Productos</h2>
+
+        <div class="galeria">
+            <img src="https://share.google/bgxtzQZc3hLBe3E4K" alt="Mascotas y Accesorios Mundo Patitas" onclick="ampliarImagen(this)">
+            <img src="https://m.media-amazon.com/images/I/719eOVbIxDL._AC_.jpg" alt="Juguetes para Gatos Mundo Patitas" onclick="ampliarImagen(this)">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.Jw5w4K7ssnAzTFrzvmHtzwHaEO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Perros y Gatos Felices" onclick="ampliarImagen(this)">
+        </div>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+
+        <form onsubmit="enviarFormulario(event)">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="email" id="correo" placeholder="Correo electrónico" required>
+            <textarea id="mensaje" placeholder="Escribe tu mensaje o consulta sobre tus mascotas" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 Mundo Patitas - Tienda de Mascotas</p>
+        <p>Página creada con HTML, CSS y JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Carrito guardado en el navegador del cliente.
+        let carrito = [];
+        try {
+            carrito = JSON.parse(localStorage.getItem('mundoPatitasCarrito')) || [];
+        } catch (error) {
+            carrito = [];
+        }
+
+        // Para habilitar pagos reales con tarjeta se debe integrar una pasarela
+        // y un endpoint seguro en el servidor. No introducir claves privadas aquí.
+        const URL_PAGO_SEGURO = '';
+
+        function formatoPesos(valor) {
+            return valor.toLocaleString('es-CO', {
+                style: 'currency',
+                currency: 'COP',
+                maximumFractionDigits: 0
+            });
+        }
+
+        function guardarCarrito() {
+            localStorage.setItem('mundoPatitasCarrito', JSON.stringify(carrito));
+        }
+
+        function agregarAlCarrito(nombre, precio) {
+            const existente = carrito.find(producto => producto.nombre === nombre);
+            if (existente) existente.cantidad++;
+            else carrito.push({ nombre, precio, cantidad: 1 });
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const lista = document.getElementById('lista-carrito');
+            const totalTexto = document.getElementById('total-carrito');
+
+            if (carrito.length === 0) {
+                lista.innerHTML = '<p class="carrito-vacio">Todavía no has agregado productos.</p>';
+                totalTexto.textContent = formatoPesos(0);
+                guardarCarrito();
+                return;
+            }
+
+            let total = 0;
+            lista.innerHTML = '';
+
+            carrito.forEach((producto, indice) => {
+                const subtotal = producto.precio * producto.cantidad;
+                total += subtotal;
+
+                const item = document.createElement('div');
+                item.className = 'item-carrito';
+
+                const detalle = document.createElement('div');
+                const nombre = document.createElement('strong');
+                nombre.textContent = producto.nombre;
+                const precio = document.createElement('div');
+                precio.textContent = `${formatoPesos(producto.precio)} x ${producto.cantidad}`;
+                detalle.append(nombre, precio);
+
+                const botones = document.createElement('div');
+                const menos = document.createElement('button');
+                menos.type = 'button';
+                menos.textContent = '−';
+                menos.setAttribute('aria-label', 'Quitar una unidad');
+                menos.onclick = () => cambiarCantidad(indice, -1);
+                const mas = document.createElement('button');
+                mas.type = 'button';
+                mas.textContent = '+';
+                mas.setAttribute('aria-label', 'Agregar una unidad');
+                mas.onclick = () => cambiarCantidad(indice, 1);
+                botones.append(menos, document.createTextNode(' '), mas);
+
+                item.append(detalle, botones);
+                lista.appendChild(item);
+            });
+
+            totalTexto.textContent = formatoPesos(total);
+            guardarCarrito();
+        }
+
+        function cambiarCantidad(indice, cambio) {
+            if (!carrito[indice]) return;
+            carrito[indice].cantidad += cambio;
+            if (carrito[indice].cantidad <= 0) carrito.splice(indice, 1);
+            actualizarCarrito();
+        }
+
+        function vaciarCarrito() {
+            carrito = [];
+            actualizarCarrito();
+        }
+
+        function filtrarProductos() {
+            const texto = document.getElementById('buscar-producto').value.trim().toLowerCase();
+            const categoria = document.getElementById('categoria-producto').value;
+            const orden = document.getElementById('orden-productos').value;
+            const contenedor = document.getElementById('contenedor-productos');
+            const tarjetas = Array.from(contenedor.querySelectorAll('.producto'));
+
+            tarjetas.sort((a, b) => {
+                if (orden === 'menor') return Number(a.dataset.precio) - Number(b.dataset.precio);
+                if (orden === 'mayor') return Number(b.dataset.precio) - Number(a.dataset.precio);
+                if (orden === 'nombre') return a.dataset.nombre.localeCompare(b.dataset.nombre);
+                return 0;
+            });
+
+            tarjetas.forEach(tarjeta => {
+                const coincideTexto = tarjeta.dataset.nombre.includes(texto);
+                const coincideCategoria = categoria === 'todos' || tarjeta.dataset.categoria === categoria;
+                tarjeta.hidden = !(coincideTexto && coincideCategoria);
+                contenedor.appendChild(tarjeta);
+            });
+
+            let aviso = contenedor.querySelector('.sin-resultados');
+            if (!aviso) {
+                aviso = document.createElement('p');
+                aviso.className = 'sin-resultados';
+                aviso.textContent = 'No encontramos productos con esos filtros.';
+                contenedor.appendChild(aviso);
+            }
+            aviso.style.display = tarjetas.some(t => !t.hidden) ? 'none' : 'block';
+        }
+
+        function datosDelPedido() {
+            return {
+                nombre: document.getElementById('cliente-nombre').value.trim(),
+                correo: document.getElementById('cliente-correo').value.trim(),
+                telefono: document.getElementById('cliente-telefono').value.trim(),
+                direccion: document.getElementById('cliente-direccion').value.trim(),
+                notas: document.getElementById('cliente-notas').value.trim()
+            };
+        }
+
+        function textoPedido(datos) {
+            let total = 0;
+            let mensaje = `Hola, Mundo Patitas. Quiero hacer este pedido.%0A%0A`;
+            mensaje += `Nombre: ${encodeURIComponent(datos.nombre)}%0A`;
+            mensaje += `Correo: ${encodeURIComponent(datos.correo)}%0A`;
+            mensaje += `Teléfono: ${encodeURIComponent(datos.telefono)}%0A`;
+            mensaje += `Dirección: ${encodeURIComponent(datos.direccion)}%0A`;
+            if (datos.notas) mensaje += `Notas: ${encodeURIComponent(datos.notas)}%0A`;
+            mensaje += `%0AProductos:%0A`;
+
+            carrito.forEach(producto => {
+                const subtotal = producto.precio * producto.cantidad;
+                total += subtotal;
+                mensaje += `- ${encodeURIComponent(producto.nombre)} x ${producto.cantidad}: ${encodeURIComponent(formatoPesos(subtotal))}%0A`;
+            });
+            mensaje += `%0ATotal: ${encodeURIComponent(formatoPesos(total))}`;
+            return mensaje;
+        }
+
+        function comprarPorWhatsApp() {
+            if (carrito.length === 0) {
+                alert('Primero agrega uno o más productos al carrito.');
+                return;
+            }
+
+            const formulario = document.getElementById('formulario-compra');
+            if (!formulario.reportValidity()) return;
+
+            const datos = datosDelPedido();
+            const telefonoTienda = '573000000000'; // Reemplaza por el WhatsApp real de la tienda.
+            window.open(`https://wa.me/${telefonoTienda}?text=${textoPedido(datos)}`, '_blank');
+        }
+
+        function mostrarFormularioTarjeta() {
+            const metodo = document.querySelector('input[name="metodo-pago"]:checked');
+            const formularioTarjeta = document.getElementById('datos-tarjeta');
+            const mostrar = metodo && metodo.value === 'tarjeta';
+            formularioTarjeta.hidden = !mostrar;
+
+            ['tarjeta-nombre', 'tarjeta-numero', 'tarjeta-fecha', 'tarjeta-cvv'].forEach(id => {
+                const campo = document.getElementById(id);
+                campo.required = Boolean(mostrar);
+            });
+        }
+
+        function finalizarCompra(event) {
+            event.preventDefault();
+
+            if (carrito.length === 0) {
+                alert('Tu carrito está vacío. Agrega productos antes de continuar.');
+                return;
+            }
+
+            const datos = datosDelPedido();
+            const metodo = document.querySelector('input[name="metodo-pago"]:checked');
+
+            if (!metodo) {
+                alert('Selecciona una forma de pago.');
+                return;
+            }
+
+            if (metodo.value === 'tarjeta') {
+                const numero = document.getElementById('tarjeta-numero').value.replace(/\s/g, '');
+                const fecha = document.getElementById('tarjeta-fecha').value.trim();
+                const cvv = document.getElementById('tarjeta-cvv').value.trim();
+                const titular = document.getElementById('tarjeta-nombre').value.trim();
+
+                if (!titular || !/^\d{12,19}$/.test(numero) || !/^\d{2}\/\d{2}$/.test(fecha) || !/^\d{3,4}$/.test(cvv)) {
+                    alert('Completa los datos ficticios de la tarjeta para continuar con la demostración.');
+                    return;
+                }
+            }
+
+            const nombreMetodo = {
+                tarjeta: 'Tarjeta débito/crédito (simulación)',
+                nequi: 'Nequi (simulación)',
+                contraentrega: 'Pago contra entrega'
+            }[metodo.value];
+
+            let total = carrito.reduce((suma, producto) => suma + producto.precio * producto.cantidad, 0);
+
+            alert(
+                '¡Compra realizada exitosamente! 🎉\n\n' +
+                'Gracias por comprar en Mundo Patitas, ' + datos.nombre + '.\n' +
+                'Forma de pago: ' + nombreMetodo + '.\n' +
+                'Total del pedido: ' + formatoPesos(total) + '.\n\n' +
+                'Esta es una compra de demostración. No se realizó ningún cobro.'
+            );
+
+            // Limpiar carrito y campos de pago; no se almacenan datos de tarjeta.
+            vaciarCarrito();
+            document.getElementById('formulario-compra').reset();
+            document.getElementById('datos-tarjeta').hidden = true;
+        }
+
+        actualizarCarrito();
+    </script>
+
+
+</body>
+</html>
